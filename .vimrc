@@ -4,6 +4,7 @@ imap <C-n> <Plug>(copilot-next)
 
 syntax enable
 set number
+set pastetoggle=<F2>
 
 " Set indentation settings
 set tabstop=4       " Number of spaces a <Tab> in the file counts for
