@@ -132,3 +132,6 @@ set -o vi
 
 # poetry
 alias poetry-shell='source $(poetry env info --path)/bin/activate'
+
+# uv
+alias uvshell='source .venv/bin/activate'
