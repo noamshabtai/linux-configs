@@ -6,6 +6,12 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
+      - id: fix-byte-order-marker
+      - id: check-byte-order-marker
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-merge-conflict
+      - id: check-case-conflict
 
   - repo: git@github.com:psf/black.git
     rev: 24.10.0
@@ -24,7 +30,7 @@ repos:
           - "--select=PERF,PL,B,S,F,W,E,I,TID"
           - "--line-length=120"
           - "--verbose"
-          - "--ignore=S101,PLR2004,PLW0603,PLW0602"
+          - "--ignore=S101,S603,PLR2004,PLW0603,PLW0602"
         files: ^.*(test.*\.py|.*test\.py)$
 
       - id: ruff
@@ -39,11 +45,19 @@ repos:
 
 
 
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.5
+    hooks:
+      - id: forbid-crlf
+      - id: remove-crlf
+      - id: forbid-tabs
+      - id: remove-tabs
+
   - repo: local
     hooks:
       - id: pytest
         name: pytest
-        entry: python -m pytest
+        entry: pytest -n 6
         language: system
         files: ^.*(test_.*\.py|.*_test\.py)$
         pass_filenames: false
