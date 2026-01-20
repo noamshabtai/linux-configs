@@ -35,6 +35,10 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# Locale settings for UTF-8 support
+export LANG=en_IL.UTF-8
+export LC_ALL=en_IL.UTF-8
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 export TERM="xterm-256color"
 export CLICOLOR=1
