@@ -1,7 +1,3 @@
-" Copilot settings
-imap <C-l> <Plug>(copilot-accept-word)
-imap <C-n> <Plug>(copilot-next)
-
 syntax enable
 set number
 set pastetoggle=<F2>
