@@ -136,6 +136,9 @@ alias poetry-shell='source $(poetry env info --path)/bin/activate'
 # uv
 alias uvshell='source .venv/bin/activate'
 
+# meld dark mode
+alias meld='GTK_THEME=Adwaita:dark meld'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
